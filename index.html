@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -40,15 +40,19 @@ h1{
 }
 </style>
 </head>
-
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
 <body>
 
 <h1>JEUX DE LETTRES</h1>
 
 <div class="menu">
-  <button class="btn" onclick="go('trio-lettres.html')">TRIO-LETTRES</button>
-  <button class="btn" onclick="go('quatro-lettres.html')">QUATRO-LETTRES</button>
-  <button class="btn" onclick="go('quinto-lettres.html')">QUINTO-LETTRES</button>
+ <button class="btn" onclick="go('trio-lettres.html')">TRIO-LETTRES</button>
+<button class="btn" onclick="go('quatro-lettres.html')">QUATRO-LETTRES</button>
+<button class="btn" onclick="go('quinto-lettres.html')">QUINTO-LETTRES</button>
  
 </div>
 
@@ -64,4 +68,4 @@ if ('serviceWorker' in navigator) {
 </script>
 
 </body>
-</html>
+</html>﻿
