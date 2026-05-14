@@ -1,3 +1,4 @@
+﻿
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,67 +57,6 @@ if ('serviceWorker' in navigator) {
 
 <p style="font-size:31px; font-style:italic; margin-top:30px; line-height:1.5;">
 Trois jeux vous sont proposés.<br>
-Pour chacun, remplir les grilles de mots<br>
-verticalement et horizontalement !
-</p>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>JEUX DE LETTRES</title>
-
-<link rel="manifest" href="manifest.json">
-
-<style>
-body{
-  font-family:Freestyle Script;
-  text-align:center;
-  margin:0;
-  background:#ffffff;
-}
-
-h1{
-  margin-top:50px;
-  font-size:50px;
-}
-
-.menu{
-  margin-top:50px;
-}
-
-.btn{
-  display:block;
-  width:260px;
-  margin:20px auto;
-  padding:20px;
-  font-size:22px;
-  border:2px solid #000;
-  cursor:pointer;
-  background:#f5f5f5;
-  border-radius:12px;
-}
-
-.btn:hover{
-  background:#e0e0e0;
-}
-</style>
-</head>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
-}
-</script>
-<body>
-
-<h1>JEUX DE LETTRES</h1>
-
-<div class="menu">
- <button class="btn" onclick="go('trio-lettres.html')">TRIO-LETTRES</button>
-<button class="btn" onclick="go('quatro-lettres.html')">QUATRO-LETTRES</button>
-<button class="btn" onclick="go('quinto-lettres.html')">QUINTO-LETTRES</button>
-
-<p style="font-size:31px; font-style:italic; margin-top:30px; line-height:1.5;">
-Trois jeux sont proposés.<br>
 Pour chacun, remplir les grilles de vos propres mots<br>
 verticalement et horizontalement !
 </p>
@@ -127,6 +67,27 @@ Le lexique des mots est lisible en aide pour chaque jeu sur le site :<br>
 2026.wixsite.com/trio-lettres
 </a>
 </p>
+
+
+
+ 
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+
+// Service Worker (APP)
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>p>
+
+
 
  
 </div>
@@ -144,20 +105,3 @@ if ('serviceWorker' in navigator) {
 
 </body>
 </html>
-
-  
-</div>
-
-<script>
-function go(page){
-  window.location.href = page;
-}
-
-// Service Worker (APP)
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
-}
-</script>
-
-</body>
-</html>﻿
